@@ -3,7 +3,7 @@ from .database import Base
 from sqlalchemy.sql.sqltypes import TIMESTAMP
 from sqlalchemy.sql.expression import text
 
-# This piece of code initializes the table - Describes how the table will look like at Postgressql
+# This piece of code initializes the table - Describes how the table will look like at Postgresql
 
 class Post(Base):
     __tablename__ = 'user_posts'
