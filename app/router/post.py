@@ -56,7 +56,7 @@ def delete_post(id:int, current_user : int = Depends(oauth2.get_current_user), d
     #deleted_post = cursor.fetchone()   
     post_to_delete  = db.query(models.Post).filter(models.Post.id == id).first()
  
-    if post_to_delete == None:
+    if post_to_delete is None:
         raise HTTPException(status_code = status.HTTP_404_NOT_FOUND, 
                             detail= f' Post {id} doesnt exist')
     print (type(current_user.id))
